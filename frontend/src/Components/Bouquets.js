@@ -32,6 +32,7 @@ class Bouquets extends Component {
                 {bouquets?
                 <div>
                 <div>Choose from a variety of bouquets!</div>
+                <button onClick = {() => this.logOut()}>LogOut</button>
                     <ul>
                         {bouquets.map(bouquet => 
                            <div>
@@ -45,7 +46,7 @@ class Bouquets extends Component {
                             <li id = {bouquet.id} onClick = {(e) => this.handleChange(e)}>{`${bouquet.name}`}</li></Link>
                             </div>)}
                     </ul>
-                <button onClick = {() => this.logOut()}>LogOut</button>
+                
                 </div>
                 :
                 ''

@@ -1,26 +1,36 @@
 import React, { Component } from 'react'
+import Cart from './Cart'
+import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
 
 class BouquetView extends Component {
 
-    componentDidMount = () => {
-        // fetch(`http://localhost:3000/bouquet/${bouquet.id}`)
-    }
+Purchase = () => {
+    this.props.history.push({
+        pathname: "/cart",
+        state: {
+            bouquet: this.props.location.state.bouquet
+        }
+    })
+    console.log('I am buying this')
+}
 
     render () {
-        console.log(this.props.location.state.bouquet)
+        
         return (
             <div>
-
 <table>
     <tr>
     <th><img src = {this.props.location.state.bouquet.img_url}></img></th>
-    <th>Second Column</th>
+    <th><div>
+        <h1>{this.props.location.state.bouquet.name}</h1>   
+        <h3>{this.props.location.state.bouquet.description}</h3>
+        <h3>{this.props.location.state.bouquet.price}</h3>  
+        <button onClick = {() => this.Purchase()}>Add to Cart</button>
+    </div></th>
     </tr> 
 </table>
-
             </div>
-        )
-    }
+        )}
 
 
 }
