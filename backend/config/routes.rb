@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/bouquets/:id', to: 'bouquets#show'
 
   resources :users
+  resources :orders
 
   post '/login', to: 'auth#create'
 

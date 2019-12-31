@@ -1,0 +1,11 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    }
+    .bg {
+    background-image: url("https://cdn4.1800flowers.com/wcsstore/Flowers/images/catalog/167693xlx.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    }

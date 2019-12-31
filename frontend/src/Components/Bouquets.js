@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
 import BouquetCard from './BouquetCard'
+import './index.css';
 
 class Bouquets extends Component {
 
@@ -27,11 +28,11 @@ class Bouquets extends Component {
     render() {
         const bouquets = this.state.bouquets
         console.log(bouquets)
-        return (
+        return (<div className="bg">
             <div>
                 {bouquets?
                 <div>
-                <div>Choose from a variety of bouquets!</div>
+                <div><h1>Choose from a variety of bouquets!</h1></div>
                 <button onClick = {() => this.logOut()}>LogOut</button>
                     <ul>
                         {bouquets.map(bouquet => 
@@ -51,11 +52,12 @@ class Bouquets extends Component {
                 :
                 ''
                 }
-            </div>  
+            </div>  </div>
         )}
-
+        
 
 
 }
+
 
 export default Bouquets

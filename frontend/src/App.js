@@ -10,6 +10,7 @@ import Purchase from './Components/Purchase'
 import SignUp from '../src/Components/SignUp'
 import LogIn from '../src/Components/LogIn'
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 

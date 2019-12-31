@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './index.css';
 
 class LogIn extends Component {
 
@@ -24,6 +25,7 @@ class LogIn extends Component {
         .then (res => res.json())
         .then (userInfo => {
             localStorage.token = userInfo.token
+            localStorage.id = userInfo.id
             if (userInfo.token){
                 
                 this.props.history.push("/bouquets")

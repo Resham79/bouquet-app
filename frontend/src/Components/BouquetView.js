@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Cart from './Cart'
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
 
+
 class BouquetView extends Component {
 
 Purchase = () => {

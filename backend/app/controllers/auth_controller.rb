@@ -5,7 +5,7 @@ def create
 
     if user && user.authenticate(params[:password])
         
-        render json: {username: user.username, token: encode_token({user_id: user.id})}
+        render json: {username: user.username, id: user.id, token: encode_token({user_id: user.id})}
     else
         
         render json: {error: "Invalid username/password"}

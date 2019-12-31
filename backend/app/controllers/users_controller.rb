@@ -10,10 +10,13 @@ def new
   end
 
 def create
+    # byebug
     @user = User.new(user_params)
-    
+    # byebug
         if @user.valid?
             @user.save
+            
+            UserMailer.with(user: @user).purchase_email.deliver_now
             render json: {message: "User created"}
         else
             render json: {error: "Username/password invalid"}
@@ -28,7 +31,7 @@ end
 
 private
 def user_params
-    params.permit(:username, :password, :email, :address, :phone)
+    params.require(:user).permit(:username, :password, :email, :address, :phone)
 end
 
 end
