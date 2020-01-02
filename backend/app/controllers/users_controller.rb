@@ -15,8 +15,6 @@ def create
     # byebug
         if @user.valid?
             @user.save
-            
-            UserMailer.with(user: @user).purchase_email.deliver_now
             render json: {message: "User created"}
         else
             render json: {error: "Username/password invalid"}

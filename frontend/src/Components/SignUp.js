@@ -28,8 +28,8 @@ class SignUp extends Component {
             }})
         })
         .then (res => res.json())
-        .then (console.log)
-        this.props.history.push("/bouquets")
+        .then (() => this.props.history.push("/login"))
+        
     }
 
     render() {

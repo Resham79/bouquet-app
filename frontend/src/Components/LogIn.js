@@ -38,14 +38,14 @@ class LogIn extends Component {
     
 
     render() {
-        return (
-            <div>
+        return (<div className="bg">
+            <div><h1>Please log in.</h1>
                 <form onSubmit = {(e) => this.login(e)}>
                 <input onChange = {(e) => this.handleChange(e)} name="username" type="text" placeholder = "username"/>
                 <input onChange = {(e) => this.handleChange(e)} name="password" type="password" placeholder = "password"/>
                 <input type="submit" value="Submit" />
                 </form>
-            </div>
+            </div></div>
         )}
 
 
